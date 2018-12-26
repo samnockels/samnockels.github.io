@@ -1,0 +1,9 @@
+{
+  "name": "samnockels.io",
+  "version": "0",
+  "description": "portfolio",
+  "main": "index.htm",
+  "repository": "samnockels.github.io",
+  "author": "Sam Nockels",
+  "license": "MIT"
+}
