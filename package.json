@@ -2,8 +2,11 @@
   "name": "samnockels.io",
   "version": "0",
   "description": "portfolio",
-  "main": "index.htm",
+  "main": "index.html",
   "repository": "samnockels.github.io",
   "author": "Sam Nockels",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
 }
