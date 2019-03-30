@@ -28,6 +28,7 @@
 
 body{
     font-family: 'Muli', sans-serif !important;
+    overflow: hidden
 }
 
 #page_wrap{
@@ -36,13 +37,25 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background: #F6F4F2;
+    background: #FFF;
+    #boxes{
+        position: absolute;
+        top: 20%;
+        bottom: 20%;
+        left: 0px; 
+        right: 0px;
+        .box{
+            width:30px;
+            height:30px;
+            background:#A4FF4F;
+            position: absolute;
+        }
+    }
     .nav{
         font-size: 1.5em;
     }
     .name{
         color:#2E2C2C;
-
     }
 }
 
