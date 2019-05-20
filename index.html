@@ -5,27 +5,53 @@
         <script src="node_modules/animejs/lib/anime.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
+    
     <body>
-        <div id="page_wrap" class="container-fluid m-0 p-0 d-flex flex-column justify-content-center align-items-center">
-            <h1 class="name">Sam Nockels</h1>
-            <nav class="nav pt-3">
-                <a class="nav-link text-secondary" href="https://github.com/samnockels"  target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a class="nav-link text-secondary" href="https://www.linkedin.com/in/samnockels/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a class="nav-link text-secondary" href="mailto:samnockels@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a class="nav-link text-secondary" href="https://stackoverflow.com/users/2229701/sam" target="_blank">
-                    <i class="fab fa-stack-overflow"></i>
-                </a>
-            </nav>
+        
+        <div id="splash" class="container-fluid d-flex flex-column justify-content-start align-items-center bg-dark">
+            <h1 class="text-light pt-5 pb-2">Sam Nockels</h1>
+            <p>Welcome to my Portfolio</p>
+        </div>
 
-            <a class="btn btn-primary mt-5" href="projects.html">
-                <i class="fas fa-briefcase pr-2"></i>View projects
+        <nav id="main-nav" class="navbar justify-content-center bg-light">
+            <a class="nav-link text-secondary" href="https://github.com/samnockels"  target="_blank">
+                <i class="fab fa-github"></i>
             </a>
-        </div> 
+            <a class="nav-link text-secondary" href="https://www.linkedin.com/in/samnockels/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="nav-link text-secondary" href="mailto:samnockels@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a class="nav-link text-secondary" href="https://stackoverflow.com/users/2229701/sam" target="_blank">
+                <i class="fab fa-stack-overflow"></i>
+            </a>
+        </nav>
+
+        <div id="projects" class="container">
+
+            <div class="container-fluid mt-5 mb-5">
+                <h2 class='title'>Projects</h2>
+            </div>
+
+            <div class="container-fluid mt-5">
+                
+                <a href="machine-learning-line-follower.html">
+                    <div class="card" style="width: 25rem;">
+                        <img class="card-img-top" src="follower.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning Line Follower</h5>
+                            <p class="card-text">Dissertation project for exploring machine learning techniques for use on raw sensor data</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 20 May 2019</small>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
     </body>
 </html>

@@ -1,0 +1,320 @@
+<html>
+    <head>
+        <title>samnockels.github.io</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="node_modules/animejs/lib/anime.min.js"></script>
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <nav id="main-nav" class="navbar justify-content-start bg-dark">
+            <a href="index.html">
+                <h5 class="m-0 medium text-secondary">Sam Nockels</h5>
+            </a>
+            <a class="nav-link text-secondary ml-auto"
+                href="https://github.com/samnockels" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="nav-link text-secondary"
+                href="https://www.linkedin.com/in/samnockels/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="nav-link text-secondary"
+                href="mailto:samnockels@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a class="nav-link text-secondary"
+                href="https://stackoverflow.com/users/2229701/sam"
+                target="_blank">
+                <i class="fab fa-stack-overflow"></i>
+            </a>
+        </nav>
+
+        <div id="splash" class="container-fluid d-flex flex-column
+            justify-content-start align-items-center blue_grad">
+            <h1 class="text-light">Machine Learning Line Following Robot &nbsp;
+                &#x1F916;</h1>
+        </div>
+
+        <nav class="navbar justify-content-center bg-light">
+            <a class="nav-link text-secondary"
+                href="https://github.com/samnockels/Machine-Learning-Line-Follower" target="_blank">
+                <i class="fab fa-github"></i> Go to the repo
+            </a>
+        </nav>
+
+        <div class="container">
+
+            <div class="container-fluid mt-5">
+
+                <p class="mb-5">
+                    This is my 3rd-year dissertation project at Newcastle
+                    University, exploring the machine learning techniques
+                    for a line following robot. This was a really good
+                    opportunity for me to learn basic Machine Learning
+                    techniques.
+                    I have made all of the source code available <a
+                        href="https://github.com/samnockels/Machine-Learning-Line-Follower"
+                        target="_blank">here</a>, with the hope of this being a
+                    fun educational project for those who
+                    want to learn machine learning, whilst getting to play around
+                    with a robot!
+                </p>
+
+                <center>
+                    <img
+                        src="https://raw.githubusercontent.com/samnockels/Machine-Learning-Line-Follower/master/follower.jpeg"
+                        height="400">
+                </center>
+
+                <h3 class='title mt-5'>How does it work?</h3>
+
+                <p class="mb-5">
+                    The robot used in this project uses a <a
+                        href="https://shop.pimoroni.com/products/raspberry-pi-3-b-plus?src=raspberrypi">Raspberry
+                        Pi 3 Model B+</a>, with a connected vision sensor called
+                    <a href="https://pixycam.com/buy/">Pixy</a>, developed by CharmedLabs. Pixy can be trained to recognise up to seven
+                    distinct colours, at 50 frames every second (50Hz).  After training Pixy, it will draw bounding boxes over the areas in the image where that colour occurs.  After training Pixy the colour blue, and pointing Pixy to a blue line, the resulting bounding boxes may look something like this:
+
+                    <center><img src="line-follower/pixymonapp.png" height="400"></center>
+
+                    <br>
+
+                    For more details about Pixy's colour training process, have a read through this <a href="https://docs.pixycam.com/wiki/doku.php?id=wiki:v1:teach_pixy_an_object_2">page</a>.
+
+                    The idea behind this project is that by driving the robot around a track (following a coloured line) using a game controller (such as a PlayStation controller), we can record the data that Pixy gives us along with the data that the controller outputs.  So long as your driving skills are good enough, the data should give a good mapping between what the robot sees, and which way it should move.  In the case that you are really bad at driving a robot around the track, I have made all of the data I collected available <a href="https://github.com/samnockels/Machine-Learning-Line-Follower/tree/master/data">here</a>
+
+                </p>
+
+                <h3 class='title mt-5'>What you'll need</h3>
+
+                <p>
+                    You'll need all of the hardware below to get going with this project.  &nbsp; An important note is that this project uses the original Pixy camera, although you could buy the original, it may be worth buying the more recent <a href="https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:start">Pixy 2</a>. &nbsp; You will also need a micro USB cable to connect the Pixy to the Pi.
+                </p>
+
+                <table class='table table-bordered table-sm text-center mt-5 justify-content-center align-items-center
+                    mx-auto'>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Hardware</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <center>
+                                    <img src="line-follower/pi.png"
+                                        height="150">
+                                </center>
+                            </td>
+                            <td>Raspberry Pi 3 Model B+</td>
+                            <td>£34</td>
+                            <td>
+                                <a class="btn btn-primary"
+                                    href="https://shop.pimoroni.com/products/raspberry-pi-3-b-plus?src=raspberrypi">Buy</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>
+                                    <img src="line-follower/pixy.jpg"
+                                        height="150">
+                                </center>
+                            </td>
+                            <td>Pixy Camera</td>
+                            <td>£60</td>
+                            <td>
+                                <a class="btn btn-primary"
+                                    href="https://pixycam.com/buy/">Buy</a>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                    <center>
+                                        <img src="line-follower/stspi.jpeg"
+                                            height="150">
+                                    </center>
+                                </td>
+                                <td>Explorer HAT Pro</td>
+                                <td>£22.50</td>
+                                <td>
+                                    <a class="btn btn-primary"
+                                        href="https://shop.pimoroni.com/products/sts-pi">Buy</a>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td>
+                                <center>
+                                    <img src="line-follower/explorerhat.jpeg"
+                                        height="150">
+                                </center>
+                            </td>
+                            <td>Explorer HAT Pro</td>
+                            <td>£19.50</td>
+                            <td>
+                                <a class="btn btn-primary"
+                                    href="https://shop.pimoroni.com/products/explorer-hat">Buy</a>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                    <center>
+                                        <img src="line-follower/battery.jpg"
+                                            height="150">
+                                    </center>
+                                </td>
+                                <td>Power Bank</td>
+                                <td>£15+</td>
+                                <td>
+                                    <a class="btn btn-primary"
+                                        href="https://www.amazon.co.uk/s?k=Phone+power+bank&i=electronics&ref=nb_sb_noss">Buy</a>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td colspan="2" class="text-right pr-4"><b>Total:</b></td>
+                            <td><b>approx £150</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+                
+                
+
+                <h3 class='title mt-5'>Collected Data</h3>
+
+                <p>
+                    A total of 40 laps of data was recorded on the track (a
+                    total of ~2 million frames recorded by the camera)
+                    <ul>
+                        <li><p>a_1 to a_5 are all left turns (normal orientation
+                                on track)</p></li>
+                        <li><p>b_1 to b_5 are all right turns (reverse
+                                orientation on track)</p></li>
+                    </ul>
+                </p>
+
+                <center><img class="my-3"
+                        src="https://raw.githubusercontent.com/samnockels/Machine-Learning-Line-Follower/master/orientations.png"></center>
+                <table class='table table-bordered table-hover table-sm
+                    text-center mt-5 mx-auto col-6'>
+                    <thead>
+                        <tr>
+                            <th>Dataset #</th>
+                            <th>Orientation on track</th>
+                            <th>Number of laps recorded</th>
+                            <th>Number of samples recorded</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>a_1</td>
+                            <td>Normal</td>
+                            <td>4</td>
+                            <td>237,763</td>
+                        </tr>
+                        <tr>
+                            <td>a_2</td>
+                            <td>Normal</td>
+                            <td>4</td>
+                            <td>221,348</td>
+                        </tr>
+                        <tr>
+                            <td>a_3</td>
+                            <td>Normal</td>
+                            <td>4</td>
+                            <td>230,029</td>
+                        </tr>
+                        <tr>
+                            <td>a_4</td>
+                            <td>Normal</td>
+                            <td>4</td>
+                            <td>231,996</td>
+                        </tr>
+                        <tr>
+                            <td>a_5</td>
+                            <td>Normal</td>
+                            <td>4</td>
+                            <td>229,798</td>
+                        </tr>
+                        <tr>
+                            <td>b_1</td>
+                            <td>Reverse</td>
+                            <td>4</td>
+                            <td>235,857</td>
+                        </tr>
+                        <tr>
+                            <td>b_2</td>
+                            <td>Reverse</td>
+                            <td>4</td>
+                            <td>231,088</td>
+                        </tr>
+                        <tr>
+                            <td>b_3</td>
+                            <td>Reverse</td>
+                            <td>4</td>
+                            <td>228,466</td>
+                        </tr>
+                        <tr>
+                            <td>b_4</td>
+                            <td>Reverse</td>
+                            <td>4</td>
+                            <td>230,556</td>
+                        </tr>
+                        <tr>
+                            <td>b_5</td>
+                            <td>Reverse</td>
+                            <td>4</td>
+                            <td>226,914</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td><strong>40</strong></td>
+                            <td><strong>2,303,815</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+
+                <h3 class='title mt-5'>Visualising the collected Data</h3>
+
+                <p class="mb-3">
+                    Below is a visualisation of the collected data (a_1.json to be precise), using this <a href="https://editor.p5js.org/samnockels/sketches/QGviwbTIc">p5.js sketch. </a> Click play to see it run!
+                </p>
+
+                <center>
+                    <iframe id="frame" style="width: 700px; height: 700px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/samnockels/embed/QGviwbTIc"></iframe>
+                </center>
+                
+                <br>
+
+                <h3 class='title mt-5'>Results</h3>
+
+                <p>
+                    Two models were built, one using Linear Regression & one using
+                    Neural Network. The heatmaps below show what each model has
+                    learnt. Each cell on the heatmap represents an area of the frame
+                    that the camera could detect the line - a dark colour represents
+                    a low power to the motor, and a light colour represents a high
+                    power to the motor. There are two plots per model - one for the
+                    left motor and one for the right motor.
+                </p>
+
+                <img src="https://raw.githubusercontent.com/samnockels/Machine-Learning-Line-Follower/master/linear-regression.png"
+                     height="400">
+                <img
+                    src="https://raw.githubusercontent.com/samnockels/Machine-Learning-Line-Follower/master/neural-network.png"
+                    height="400">
+            </div>
+
+        </div>
+
+    </body>
+</html>

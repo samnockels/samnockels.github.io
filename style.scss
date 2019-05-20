@@ -1,62 +1,92 @@
+$theme-colors: (
+  "dark": #15171a,
+  "lgrey": #1f2023
+);
+
 @import "node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Muli:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700');
 @mixin horizontal-gradient($from, $to, $stop: 100%) {
     /* fallback/image non-cover color */
     background-color: $from;
-
+  
     /* Firefox 3.6+ */
     background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
-
+  
     /* Safari 4+, Chrome 1+ */
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
-
+  
     /* Safari 5.1+, Chrome 10+ */
     background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
-
+  
     /* Opera 11.10+ */
     background-image: -o-linear-gradient(left, $from 0%, $to $stop);
-
+  
     /* IE10+ */
     background: -ms-linear-gradient(left, $from 0%, $to $stop);
-
+  
     /* Standard */
     background: linear-gradient(to right, $from 0%, $to $stop);
-
+  
     /* IE6-9 */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
 }
 
 body{
-    font-family: 'Muli', sans-serif !important;
-    overflow: hidden
-}
-
-#page_wrap{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #FFF;
-    #boxes{
-        position: absolute;
-        top: 20%;
-        bottom: 20%;
-        left: 0px; 
-        right: 0px;
-        .box{
-            width:30px;
-            height:30px;
-            background:#A4FF4F;
-            position: absolute;
-        }
-    }
-    .nav{
-        font-size: 1.5em;
-    }
-    .name{
-        color:#2E2C2C;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    margin-bottom: 200px;
+    p{
+        font-size: 1.1rem;
     }
 }
 
+table{
+    td{
+        vertical-align: middle !important;
+    }
+}
 
+#splash{
+    padding: 10vw 0;
+    h1{
+        font-family: 'Oxygen', sans-serif;
+        font-weight: 700
+    }
+    p{
+        font-size: 1.4rem;
+        color: #cfcfcf
+    }
+}
+
+#main-nav{
+    font-size: 1.3rem;
+    a{
+        padding: 10px 30px;
+    }
+}
+
+.title{
+    font-weight: 700;
+}
+
+.medium{
+    font-weight: 400;
+}
+
+#projects{
+    
+}
+
+a, a:hover{
+    text-decoration: none !important;
+}
+.card, card-img-top, card-img-top img, card-body, card-footer{
+    border-radius: 0 !important;
+    border: 0;
+    color: $dark;
+}
+
+div.blue_grad{
+    @include horizontal-gradient(#8E2DE2, #4A00E0);
+}
