@@ -9805,7 +9805,12 @@ table td {
 }
 
 #splash {
-  padding: 10vw 0;
+  padding: 10vw 0 !important;
+}
+#splash.front-page {
+  background-image: url("bg.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #splash h1 {
   font-family: "Oxygen", sans-serif;

@@ -48,7 +48,12 @@ table{
 }
 
 #splash{
-    padding: 10vw 0;
+    padding: 10vw 0 !important;
+    &.front-page{
+        background-image: url('bg.jpg') !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     h1{
         font-family: 'Oxygen', sans-serif;
         font-weight: 700
